@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
             Bundle b = intent.getExtras();
             for (String key : b.keySet())
             {
-                Log.v("MultiBarcodeUDI", key);
+                Log.v("MultiBarcode", key);
             }
             if (action.equals(DATAWEDGE_SCAN_ACTION))
             {
@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 String decoded_string = intent.getStringExtra("com.symbol.datawedge.data_string");
                 //  todo this is an error in the documentation - 'smart_decode_type'
                 String smart_decode_type = intent.getStringExtra("com.symbol.datawedge.smart_decoded_type");
-                String udi_type = intent.getStringExtra("com.symbol.datawedge.label_id");
+                //String udi_type = intent.getStringExtra("com.symbol.datawedge.label_id");
                 List<Bundle> multiple_barcodes = (List<Bundle>) intent.getSerializableExtra("com.symbol.datawedge.barcodes");
                 List<Bundle> tokenized_data = (List<Bundle>) intent.getSerializableExtra("com.symbol.datawedge.tokenized_data");
                 String output = "";
@@ -95,6 +95,8 @@ public class MainActivity extends AppCompatActivity {
 
                     }
                 }
+                /*
+                    Removed references to UDI
                 output += "UDI Type: " + udi_type + '\n';
                 if (tokenized_data != null)
                 {
@@ -108,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                         output += "Token (" + (i+1) + ") data:" + thisTokenizedData.getString("token_string_data") + '\n';
                     }
                 }
-
+                */
                 SetIntentOutputText(output);
             }
         }
