@@ -1,7 +1,7 @@
-# Appforum 2019: DataWedge Advanced Techniques
-
-*These applications are provided without guarantee or warranty*
+*Please be aware that this application / sample is provided as-is for demonstration purposes without any guarantee of support*
 =========================================================
+
+# Appforum 2019: DataWedge Advanced Techniques
 
 This repository contains Sample app(s) and files related to the advanced DataWedge presentation given at AppForum 2019
 
